@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>html-css basic cs50x</title>
+    <style>
+      @media (min-width: 600px) {
+        body {
+          background: linear-gradient(
+            to right,
+            rgb(226, 184, 255),
+            rgb(81, 142, 211)
+          );
+        }
+      }
+      @media (max-width:599px) {
+        body {
+          background: linear-gradient(45deg, red, yellow);
+        }
+      }
+      a {
+        color: blue;
+      }
+      a[href="https://amazon.com"]
+      {
+        color: green;
+      }
+      ul > li a {
+        color: aqua;
+      }
+      ul > li {
+        color: red;
+      }
+      button {
+        color: pink;
+        background-color: black;
+        border-radius: 50%;
+        padding: 10px;
+        height: 100px;
+        font-size: 24px;
+        margin: 30px;
+      }
+      button:hover {
+        background-color: Pink;
+        color: black;
+      }
+      button:active {
+        background-color: blue;
+        color: white;
+      }
+      /* a visited link */
+      a:visited {
+        color: green;
+      }
+      #container{
+        display:flex;
+        flex-wrap:wrap;
+      }
+      #container > div{
+        background-color: blanchedalmond;
+        font:red bold 20px sans-serif;
+        padding:10px;
+        width:200px;
+        border: solid 1px black;
+        margin: 5px;
+      }
+      .grid{
+        display:grid;
+        /* grid-template-rows: 100px; */
+        grid-template-columns:  300px 300px auto;
+        grid-column-gap: 10px; 
+        grid-row-gap:20px;
+        padding: 20px;
+        background-color: rgb(6, 78, 78);
+        margin:30px;
+
+      }
+      .grid-item {
+        /* border-color: rebeccapurple; */
+        background-color: rgb(155, 236, 218);
+        font: italic small-caps bold 20px Georgia,sans-serif;
+        padding:30px;
+        /* width:2000px; */
+        /* border: solid 1px black; */
+        margin: 5px;
+        text-align:center;
+      }
+      /* #container div{
+        
+      } */
+
+    </style>
+  </head>
+  <button>Test me</button>
+  <button>choice 1</button
+  ><button>choice 2</button>
+  <body>
+    <ol>
+      <li>
+        item1:
+        <a href="https:\\google.com">Google</a>
+        <ul>
+          <li>
+            subitem 1:
+            <a href="https://www.youtube.com/watch?v=DqaTKBU9TZk">video</a>
+          </li>
+          <li>
+            <a
+              href="https://supersimple.dev/courses/javascript-beginner-course-20201#code"
+              >exercise</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li><a href="https:\\youtube.com">Youtube</a></li>
+      <li><a href="https:\\amazon.com">Amazon</a></li>
+    </ol>
+    <!-- flex-box -->
+<div id="container">
+  <div>item1</div>
+  <div>item2</div>
+  <div>item3</div>
+  <div>item4</div>
+  <div>item5</div>
+  <div>item6</div>
+  <div>item7</div>
+  <div>item8</div>
+  <div>item9</div>
+  <div>item10</div>
+  <div>item11</div>
+  <div>item12</div> 
+</div>
+<div class="grid">
+<div class="grid-item">item1</div>
+<div class="grid-item">item2</div>
+<div class="grid-item">item3</div>
+<div class="grid-item">item4</div>
+<div class="grid-item">item5</div>
+<div class="grid-item">item6</div>
+<div class="grid-item">item7</div>
+<div class="grid-item">item8</div>
+<div class="grid-item">item9</div>
+<div class="grid-item">item10</div>
+<div class="grid-item">item11</div>
+<div class="grid-item">item12</div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+.sub-btn {
+  background-color: rgba(167, 25, 6);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  height: 35px;
+  width: 120 px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.15s;
+  padding: 9px 15px;
+  vertical-align: top;
+}
+.sub-btn:hover {
+  /* background-color: rgba(5, 231, 54, 0.5); */
+  opacity: 0.8;
+}
+.sub-btn:active {
+  /* background-color: gold; */
+  opacity: 0.4;
+}
+.join-btn {
+  color: ractivegba(10, 111, 194, 0.937);
+  border-color: rgb(23, 106, 173);
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: white;
+  height: 35px;
+  width: 65px;
+  margin-right: 5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.join-btn:hover {
+  background-color: rgb(23, 106, 173);
+  color: white;
+  font-weight: bold;
+}
+.t-btn {
+  background-color: rgba(2, 155, 255);
+  color: white;
+  border: none;
+  border-radius: 17px;
+  height: 35px;
+  width: 70px;
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.5s linear;
+}
+.t-btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.t-btn:active {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ////////////////////////////////////// */
+/* grid exercise */
+p {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  column-gap: 15px;
+}
+.profile {
+  width: 200px;
+
+  box-shadow: 0 0 5px rgba(1, 1, 1, 0.3);
+  vertical-align: top;
+  /* margin-right: 35px; */
+}
+.profile-pic {
+  width: 200px;
+  height:200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+p.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+div.frnds-row {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}
+.frnd-pic {
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  vertical-align: center;
+  margin-right: 4px;
+}
+p.frnd {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+button.frnd {
+  background-color: rgb(47, 132, 165);
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+}

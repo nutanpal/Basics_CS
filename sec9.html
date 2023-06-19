@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex9js</title>
+</head>
+<body>
+  <p>shoping cart</p>
+  <button onclick ='addveg("apple")'>apple</button>
+  <button onclick ='addveg("tomato")'>Tomato</button>
+  <button onclick ='addveg("eggs")'>Eggs</button>
+  <button onclick ='clearlist("")'>Clear</button>
+<div id="cart"></div>
+<script>
+  const cart = document.getElementById('cart');
+  function addveg(item) {
+    const elm = document.createElement('div');
+    elm.innerText= item;
+    // document.getElementById('cart').appendChild(elm);
+    cart.appendChild(elm);
+  };
+  function clearlist(elm) {
+    // document.getElementById('cart').innerHTML = " ";
+    cart.innerHTML = " ";
+  }
+</script>
+<body>
+  <!-- unit convertor -->
+
+<input type="text" id="num"/> 
+<button onclick="toCm()">Convert to cm</button>
+<button onclick="toInch()">Convert to inches</button>
+<!-- <div id="result">Result: </div> -->
+<script>
+
+  const measurement = document.getElementById('num');
+
+ function toCm() {
+    const value = measurement.value;
+
+    // value is a string and strings can't be multiplied. We need
+    // to convert it into a number before we can multiply it.
+    const convertedValue = +value * 2.54;
+
+    const result = document.createElement('div');
+    result.innerText = convertedValue;
+    document.body.appendChild(result);
+  }
+
+function toInch(){
+const value = document.getElementById('num').value;
+const convertedValue = +value/2.54;
+const result = document.createElement('div');
+result.innerText = convertedValue;
+document.body.appendChild(result);
+};
+</script>
+  
+<br>
+
+

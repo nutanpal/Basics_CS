@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSP Game</title>
+  <style>
+    button{
+      background-color: purple;
+      color:white;
+      border: none;
+      width:100px;
+      height:30px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: large;
+    }
+  </style>
+</head>
+<!-- Rock beats scissors>paper>rock.  -->
+<body>
+  <p style="font:italic bold 30px Georgia, serif; color: rgb(0,200,200)">Rock Scissors Paper</p>
+
+<button onclick="
+  playGame('rock');
+">Rock</button>
+<button onclick="playGame('scissors');">Scissors</button>
+<button onclick="playGame('paper');">Paper</button>
+
+  <script> 
+    let compMove=" ";
+    function pickCompMove(){
+      const randomN = Math.random();
+    
+        if (randomN >= 0 && randomN<1/3){
+          compMove ='rock';
+        }else if (randomN >= 1/3 && randomN <2/3){
+          compMove = 'scissor';
+        }else{
+          compMove ='paper'; 
+        };
+        return compMove;
+        // console.log(compMove);
+    };
+   
+    // <!-- result function a/c what move player chooses -->
+
+
+ function playGame(playerMove){
+   const compMove = pickCompMove();
+     let result = '';
+
+    if (playerMove ==='rock'){
+      //results
+        if (compMove === 'rock'){
+          result ='Tie';
+        }else if (compMove === 'Scissor'){
+          result = 'You Win.';
+        }else{
+          result = 'You loose.';
+        };
+  }else if (playerMove === 'Scissor'){
+        if (compMove === 'Scissor'){
+          result ='Tie';
+        }else if (compMove === 'Paper'){
+          result = 'You Win.';
+        }else{
+          result = 'You loose.';
+        };
+ }else{
+    if (compMove === 'Paper'){
+      result ='Tie';
+    }else if (compMove === 'Rock'){
+      result = 'You Win.';
+    }else{
+      result = 'You loose.';
+    };
+    alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}`);
+  };
+ </script>
+  </body>
+</html>
+
+// <!-- 
+//   <button onclick="
+//   console.log(pickCompMove());
+//   
+//     let result = '';
+//     if (compMove === 'Rock'){
+//       result ='Tie';
+//     }else if (compMove === 'Scissor'){
+//       result = 'You Win.';
+//     }else{
+//       result = 'You loose.';
+//     };
+//     alert(`You picked Rock. Computer picked ${compMove}. ${result}`);
+//   ">Rock</button>
+
+//   <button onclick="
+//   pickCompMove();
+//    //results
+    
+//   ">Scissor</button>
+
+
+//   <button onclick="
+//   pickCompMove();
+//   //results
+//     let result = '';
+//     if (compMove === 'Paper'){
+//       result ='Tie';
+//     }else if (compMove === 'Rock'){
+//       result = 'You Win.';
+//     }else{
+//       result = 'You loose.';
+//     };
+//     alert(`You picked Paper. Computer picked ${compMove}. ${result}`);
+//     ">Paper</button> -->
