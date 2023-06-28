@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jj3-bootstrap</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
   <style>
-  
+  .row>div{
+    background-color: springgreen;
+    border:teal solid 2px;
+    padding: 20px;
+  }
+  #row2>div{
+    background-color: pink;
+      border:black solid 2px;
+    padding: 20px;
+  }
 
   </style>
 
@@ -15,7 +25,63 @@
 <body>
   Hello, JJ!
   <div class="alert alert-primary">Alert feeling sleepy!</div>
-  <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
+  <div class="container">   
+    <h1>This page styled with BS</h1>
+    <div class="row">
+     <div class="col-2">se1</div>
+    <div class="col-4">sec2</div>
+    <div class="col-6">sec3</div>  
+    </div>
+    <br/>
+     <div class="row">
+     <div class="col-3">section1</div>
+    <div class="col-6">sec2</div>
+    <div class="col-3">sec3</div>
+    <div class="col-4">section1</div>
+    <div class="col-4">sec2</div>
+    <div class="col-4">sec3</div>   
+    </div>
+    <hr>
+    <div class="container">
+            <div style= "background-color: lightblue" id="row2" class="row">
+                <div class="col-lg-3 col-sm-6">
+                    This is a section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is another section.
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    This is a third section.
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    This is a 4 section.</div>
+                    <div class="col-lg-2 col-sm-6">
+                    This is a 5 section.
+                </div>
+                  </div>
+                  
+                
+            </div>
+        </div>
+    <div style= "background-color:pink"; class="container">
+        <div class="row" >
+          <div class="col-lg-3 col-sm-6">sec1</div>
+          <div class="col-lg-3 col-sm-6">sec2</div>
+          <div class="col-lg-3 col-sm-6">sec4</div>
+          <div class="col-lg-3 col-sm-6">sec5</div>
+          <div class="col-lg-3 col-sm-6">sec6</div>
+          <div class="col-lg-3 col-sm-6">sec7</div>
+      </div>
+    </div>
+  
+
+
+6
+
+
+
+ <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  >
+ </script>
 </body>
 </html>

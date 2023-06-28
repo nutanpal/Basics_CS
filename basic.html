@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basics</title>
     <link rel="stylesheet" href="basic.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
        <style>
     .tooltip-btn{
       background-color: green;
@@ -16,8 +19,62 @@
    </style>
   </head>
   <body>
+    <h1>Cat Catalogue</h1>
+    <h3> Always In Vogue</h3>
+   
+      <input type="text" placeholder ="Full name" name="name">
+      <input type="password" placeholder ="Password" name="pw"/>
+       <div>
+        Favorite Color:
+        <input type="radio" value="blue">Blue</input>
+        <input type="radio" value="green">Green</input>
+        <input type="radio" value="gold">Golden</input>
+      </div> 
+      <!-- option dropdown list html5 -->
+      <input list ="countries" name ="country" placeholder="Country">
+      <datalist id =countries>
+         <option  value="United States">
+      <option  value="Canada"> 
+      <option  value="India">India</option> 
+      </datalist>
+    
 
-    <button class="sub-btn">Subscribe</button>
+     <br>
+        <input class="submit" style="background:goldenrod" type="submit" value="Submit"></input> 
+   
+    
+    <hr>
+    </form>
+    <table>
+        <thead>
+         <th colspan ="2">Name</th>
+         <th>Age</th>
+         <th>Job</th>
+        </thead>
+        <tbody>
+          <tr>
+          <td>Cool</td>
+          <td>Cat</td>
+          <td>5 yo</td>
+          <td>Philosopher</td>
+        </tr> 
+        <tr>
+          <td>curious</td>
+            <td>Cat</td>
+          <td>10yo</td>
+          <td>Scientist</td>
+        </tr>
+        <tr>
+          <td>Crazy</td>
+          <td>Cat</td>
+          <td>12yo</td>
+          <td>Enterprenur</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="btn">
+        <button class="sub-btn">Subscribe</button>
     <button class="join-btn">Join me </button>
     <button class="t-btn" >Tweet</button>
     <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="blank"
@@ -25,6 +82,8 @@
     </a>
     <button title="tooltip: click me" class="tooltip-btn" onclick="alert('Good Job!')">Reminder</button>
         <p class="sub-para">3.5M views	&#183 6 months</p>
+    </div>
+  
         <!-- grid exercise -->
     <div class="grid">
       <div class="profile">
