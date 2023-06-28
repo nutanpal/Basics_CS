@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Exchange</title>
+    <script>
+      document.addEventListener("DOMContentLoaded",function() {
+        document.querySelector('form').onsubmit=function(){    
+          fetch("http://api.exchangeratesapi.io/v1/latest?access_key=0e6d032d1dbf834e91c91e080195af7a")
+          .then(response =>response.json())
+            .then(data =>{
+            console.log(data);
+            // const rate = data.rates.INR;
+            const currency = document.querySelector('#currency').value;
+            const rate = data.rates[currency]; // if used .curency it will look inside object property currency property
+            document.querySelector('result').innerHTML = `1 usd = ${rate.toFixed(3)}${currency}.`;
+          });
+          return false;
+        }
+        });
+
+    </script>
+  </head>
+  <body>
+  <form action="">
+    <input type="text" placeholder="Currency" id="currency">
+    <input type="submit" value="Convert">
+  </form>
+  <div id="result">
+  </div>
+  </body>
+</html>

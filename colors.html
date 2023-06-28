@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>colors</title>
+
+</head>
+<body>
+  <!-- <h1 id ="hello">hello</h1>
+  <button id="red">red</button>
+  <button id="blue">Blue</button>
+  <button id="green">Green</button>
+  <button id="yellow">Yellow</button>
+  <script>
+    //change font color of hello to differnet colors according to btn click
+    document.addEventListener("DOMContentLoaded",function(){
+      document.querySelector("#red").onclick =function(){
+        document.querySelector("#hello").style.color = "red";
+      }
+      document.querySelector("#green").onclick=function(){
+        document.querySelector("#hello").style.color = "green";
+      }
+      
+      //change  color and content of h1
+     document.querySelector("#blue").onclick =function(){
+      document.querySelector("#hello").style.color = "blue";
+        document.querySelector("#hello").innerHTML="Hi!";
+        document.querySelector("#blue").style.backgroundColor = "skyblue";
+      }
+    });</script> -->
+<!-- //Foreach loop and single event listener
+    //data attribute and single event listener of single btn.
+    // queryselectorall will select all the btns array (node-list)and querySelector give only first found . -->
+<!-- <h1 id="hello">Hello Again</h1>  
+<button data-color="red">Red</button>
+<button data-color="blue">Blue</button>
+<button data-color="green">Green</button>
+<script>
+// document.addEventListener("DOMContentLoaded", function(){
+//   document.querySelectorAll("button").forEach(function(button){
+//     button.onclick=function(){
+//       document.querySelector('#hello').style.color= button.dataset.color;
+//     }
+//   });
+// }); 
+</script>-->
+
+
+<!-- //  arrow function & select dropdown & onchange , this.value
+onclick onmouseover onkeydown onkeyup are events that I can listen-->
+ <script>
+  document.addEventListener("DOMContentLoaded",()=>{
+    document.querySelector('select').onchange=function(){
+      document.querySelector('#hello').style.color = this.value;
+    }
+   
+  });
+ </script>
+
+ <h1 id="hello">hello guys</h1>
+ <select name="" id="">
+<option value="black">black</option>
+<option value="red">red</option>
+<option value="green">green</option>
+<option value="yellow">yellow</option>
+ </select>
+  
+</body>
+</html>

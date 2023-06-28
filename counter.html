@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js_0</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script>
+      // function greet(){
+      //   document.querySelector('h1').innerHTML ="GoodBye!";
+      // }
+      function greet() {
+        const tag = document.querySelector('h1');
+        if (tag.innerHTML === "Hello!") {
+              tag.innerHTML = "Goodbye!";
+          // alert("goodbye!");
+        } else {
+          tag.innerHTML = "Hello!";
+          // alert("Hello!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <!-- <h3 id="counter">Count : 0</h3> -->
+    <h3 id="selfCounter">Self Count: </h3>
+    <button onclick="Hey()">Hi</button> 
+    <!-- <button onclick="count()">Counter  </button> -->
+    
+    <button id ="btn-counter">Counter</button>
+    <button id ="btn-sCounter">Self Counter</button>
+    <button onclick="greet()" class="alert alert-primary">greet</button>  
+ 
+    <script src = "counter.js"> </script>
+    
+   
+  </body>
+</html>
