@@ -1,0 +1,54 @@
+SQLite version 3.42.0 2023-05-16 12:36:15
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open fly.db
+sqlite> create table flights( id integer primary key autoincrement,
+(x1...> origin text not null,
+(x1...> destination text not null,
+(x1...> duration text not null);
+
+sqlite> .tables
+flights
+
+sqlite> alter table flights;
+   ...> drop column duration;
+sqlite> alter table flights
+   ...> add column duration integer not null;
+
+   sqlite> insert into flights (origin, destination, duration) values ( 'delhi', 'dallas', 400);
+sqlite> select * from flights;
+1|delhi|dallas|400
+sqlite> insert into flights(origin, destination, duration) values ('kolkat', 'iowa', 500),('a','b', 8);
+sqlite> select * from flights;
+1|delhi|dallas|400
+2|kolkat|iowa|500
+3|a|b|8
+sqlite> .mode columns
+sqlite> .headers yes
+sqlite> select * from flights;
+id  origin  destination  duration
+--  ------  -----------  ------
+1   delhi   dallas       400
+2   kolkat  iowa         500
+3   a       b            8
+
+sqlite> select * from flights where origin like '%a%';
+id  origin   destination  duration
+--  -------  -----------  --------
+2   kolkata  iowa         500
+3   a        b            8
+
+sqlite> select * from flights;
+id  origin   destination  duration
+--  -------  -----------  --------
+1   delhi    dallas       400
+2   kolkata  iowa         500
+3   a        b            450
+sqlite> delete from flights where destination ='b';
+sqlite> select * from flights order by duration;
+id  origin   destination  duration
+--  -------  -----------  --------
+1   delhi    dallas       400
+2   kolkata  iowa         500
+
